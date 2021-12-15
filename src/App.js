@@ -1,13 +1,17 @@
 import React from "react";
 import "./App.css";
 import Row from "./Row";
+import requests from "./requests";
 
 function App() {
   return (
     <div className="App">
       <h1>Mopi Test: Netflix Clone</h1>
-      <Row title="NETFLIX ORIGINALS" />
-      <Row title="Trending Now" />
+      <Row
+        title="NETFLIX ORIGINALS"
+        fetchURl={requests.fetchNetflixOriginals}
+      />
+      <Row title="Trending Now" fetchURL={requests.fetchTrending} />
     </div>
   );
 }
