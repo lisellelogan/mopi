@@ -9,9 +9,9 @@ function App() {
       <h1>Mopi Test: Netflix Clone</h1>
       <Row
         title="NETFLIX ORIGINALS"
-        fetchURl={requests.fetchNetflixOriginals}
+        fetchUrl={requests.fetchNetflixOriginals}
       />
-      <Row title="Trending Now" fetchURL={requests.fetchTrending} />
+      <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
     </div>
   );
 }
