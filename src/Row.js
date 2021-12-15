@@ -6,6 +6,9 @@ function Row({ title }) {
 
   useEffect(() => {
     // if [], run once when row loads, and dont run again
+    async function fetchData() {
+      const request = await axios.get(fetchUrll);
+    }
   }, []);
 
   // A snippet of code which runs based on a specific condition/variable
