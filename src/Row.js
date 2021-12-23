@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "./axios";
 import requests from "./requests";
 
+const base_url = "https://image.tmdb.org/t/p/orginial/"
+
 function Row({ title, fetchUrl }) {
   const [movies, setMovies] = useState([]);
 
@@ -16,7 +18,7 @@ function Row({ title, fetchUrl }) {
     fetchData();
   }, [fetchUrl]);
 
-  console.log(movies);
+  console.table(movies);
 
   // A snippet of code which runs based on a specific condition/variable
 
@@ -24,7 +26,13 @@ function Row({ title, fetchUrl }) {
     <div className="row">
       <h2>{title}</h2>
 
-      <div className="row_posters">{/* several row posters */}</div>
+      <div className="row_posters">
+        {/* several row posters */}
+        {movies.map(movie => {
+          <img src={`${base_url}${movie.poster_path}`} alt={movie.name} />
+        })}
+      </div>
+
     </div>
   );
 }
