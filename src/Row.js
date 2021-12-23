@@ -21,10 +21,10 @@ function Row({ title, fetchUrl }) {
   // A snippet of code which runs based on a specific condition/variable
 
   return (
-    <div>
+    <div className="row">
       <h2>{title}</h2>
 
-      {/* container -> posters */}
+      <div className="row_posters">{/* several row posters */}</div>
     </div>
   );
 }
