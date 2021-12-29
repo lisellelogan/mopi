@@ -1,10 +1,12 @@
 .row__posters {
-  display: flex;
-  
+  display: flex; /*puts posters in row*/
+
 }
 
 .row__poster {
   object-fit: contain;
   width: 100%;
   max-height: 100px;
+  margin-right: 10px; /*to create space between posters*/
+  transition: transform 450ms; /*if size changes for any reason then there will be a nice transition*/
 }
