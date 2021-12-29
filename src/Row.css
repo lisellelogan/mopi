@@ -7,6 +7,11 @@
   object-fit: contain;
   width: 100%;
   max-height: 100px;
-  margin-right: 10px; /*to create space between posters*/
+  margin-right: 7px; /*to create space between posters*/
   transition: transform 450ms; /*if size changes for any reason then there will be a nice transition*/
+}
+
+/*building mouse hover feature of posters so they will grow in size when you hover*/
+.row__poster:hover {
+  transform: scale(1.08); /*how much the image will grow*/
 }
