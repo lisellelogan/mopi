@@ -1,6 +1,13 @@
 .row__posters {
   display: flex; /*puts posters in row*/
+  overflow-y: hidden; /*hide vertical scroll bar*/
+  overflow-x: scroll; /*adds scroll bar to individual row*/
+  padding: 20px; /*so you can still see growth of poster on hover*/
+}
 
+/*tell all browsers to display no scroll bar*/
+.row__posters::-webkit-scrollbar {
+  display: none;
 }
 
 .row__poster {
